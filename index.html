@@ -1,12 +1,150 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Gauthier Gluckmann</title>
-  <link rel="stylesheet" href="css/style.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gauthier Glückmann - Personal Website</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  In construction...
+    <header>
+        <div class="logo">Gauthier Glückmann</div>
+        <div class="theme-switch">
+            <span id="theme-icon">
+                <!-- Fallback text if Font Awesome fails -->
+                <span class="icon-fallback-moon">🌙</span>
+            </span>
+            <label>
+                <input type="checkbox" id="theme-toggle">
+                <span class="slider"></span>
+            </label>
+        </div>
+    </header>
+
+    <section class="hero">
+        <div class="profile-container">
+            <img src="pic.jpg" alt="Profile Picture" class="profile-img">
+        </div>
+        <h1 id="name-field">Gauthier Glückmann</h1>
+        <p id="bio-field">Engineering Student | Low-level programming & ML hobbyist</p>
+        <div class="social-links">
+            <a href="https://github.com/glugau" target="_blank" title="GitHub">
+                <i class="fab fa-github"></i>
+                <span class="icon-fallback-github" style="display: none;">GH</span>
+            </a>
+            <a href="https://www.linkedin.com/in/gauthier-gluckmann-83764432b/" target="_blank" title="LinkedIn">
+                <i class="fab fa-linkedin"></i>
+                <span class="icon-fallback-linkedin" style="display: none;">IN</span>
+            </a>
+            <!-- <a href="#" target="_blank" title="Twitter">
+                <i class="fab fa-twitter"></i>
+                <span class="icon-fallback-twitter" style="display: none;">TW</span>
+            </a>
+            <a href="#" target="_blank" title="Instagram">
+                <i class="fab fa-instagram"></i>
+                <span class="icon-fallback-instagram" style="display: none;">IG</span>
+            </a> -->
+            <a href="mailto:gaugluck@gmail.com" title="Email">
+                <i class="fas fa-envelope"></i>
+                <span class="icon-fallback-email" style="display: none;">✉️</span>
+            </a>
+        </div>
+        <a href="#resume" class="cta-button">View My Resume</a>
+    </section>
+
+    <section id="resume" class="resume-section">
+        <div class="resume-header">
+            <h2>My Resume</h2>
+            <div class="resume-controls">
+                <button id="download-pdf-btn">Download PDF</button>
+            </div>
+        </div>
+        <div class="resume-container">
+            <div class="section">
+                <h3>Summary</h3>
+                <p id="summary-field">
+                    Electrical Engineering student, with a passion for eletronics and low-level software development.
+                </p>
+            </div>
+            
+            <div class="section">
+                <h3>Experience</h3>
+                <div id="experience-container">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <div class="entry-title">Student TA</div>
+                            <div class="entry-date">2022 - Present</div>
+                        </div>
+                        <div class="entry-subtitle">Liège University</div>
+                        <div class="entry-description">
+                            Worked as a student TA for calculus, algebra, C programming, digital electronics and python programming classes.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Education</h3>
+                <div id="education-container">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <div class="entry-title">Bachelor of Science in Electrical Engineering</div>
+                            <div class="entry-date">2022 - 2015</div>
+                        </div>
+                        <div class="entry-subtitle">Liège University</div>
+                        <div class="entry-description">
+                            Currently pursuing my bachelors.
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Skills</h3>
+                <div class="skills-container" id="skills-container">
+                    <div class="skill-tag">C++</div>
+                    <div class="skill-tag">C</div>
+                    <div class="skill-tag">Rust</div>
+                    <div class="skill-tag">Python</div>
+                    <div class="skill-tag">Node.js</div>
+                    <div class="skill-tag">VHDL</div>
+                    <div class="skill-tag">KiCad</div>
+                </div>
+            </div>
+            
+            <div class="section">
+                <h3>Projects</h3>
+                <div id="projects-container">
+                    <div class="entry">
+                        <div class="entry-header">
+                            <div class="entry-title">Arduino word clock</div>
+                            <div class="entry-date">2023</div>
+                        </div>
+                        <div class="entry-subtitle">Microcontroller programming</div>
+                        <div class="entry-description">
+                            Built a decorative word clock (where the time is displayed through a grid of letters forming words).
+                        </div>
+                    </div>
+                    <div class="entry">
+                        <div class="entry-header">
+                            <div class="entry-title">CPLD safe</div>
+                            <div class="entry-date">2023</div>
+                        </div>
+                        <div class="entry-subtitle">VHDL development</div>
+                        <div class="entry-description">
+                            Made a safe in VHDL with a CPLD. The device interacted with a servo motor, a keypad and a parallel EEPROM memory.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; <span id="current-year">2025</span> Gauthier Glückmann. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
 </body>
 </html>
