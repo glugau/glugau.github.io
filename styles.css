@@ -336,6 +336,17 @@ footer {
     }
 }
 
+ul {
+    list-style-type: none;
+    padding-left: 0;
+  }
+
+li::before {
+content: '-'; /* dash character */
+margin-right: 8px;
+color: --text-color; /* or any color you prefer */
+}
+
 /* Fall-back icons using unicode characters */
 .icon-fallback-moon:before {
     content: "🌙";
