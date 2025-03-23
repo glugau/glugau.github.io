@@ -208,6 +208,10 @@ input:checked + .slider:before {
     margin-bottom: 2rem;
 }
 
+.resume-header h2 {
+    margin-bottom: 0;
+}
+
 .resume-controls {
     display: flex;
     gap: 1rem;
