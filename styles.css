@@ -18,6 +18,19 @@
     --border-color: #333;
 }
 
+a {
+  color: #4da6ff; /* unvisited link */
+  text-decoration: none;
+}
+
+a:visited {
+  color: #a97fff; /* visited link — readable, non-ugly */
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 * {
     margin: 0;
     padding: 0;
