@@ -19,30 +19,34 @@
 }
 
 a {
-  color: #4da6ff; /* unvisited link */
-  text-decoration: none;
+  color: var(--text-color);
+  text-decoration: underline;
+  font-weight: bold;
 }
 
 a:visited {
-  color: #a97fff; /* visited link — readable, non-ugly */
+  color: var(--text-color);
 }
 
 a:hover {
-  text-decoration: underline;
+  background-color: var(--text-color);
+  color: var(--bg-color);
+  text-decoration: none;
 }
 
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    transition: background-color 0.3s, color 0.3s;
+    transition: none;
 }
 
 body {
-    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-family: 'Courier New', 'Courier', monospace;
     background-color: var(--bg-color);
     color: var(--text-color);
     line-height: 1.6;
+    letter-spacing: 0.5px;
 }
 
 header {
@@ -55,15 +59,16 @@ header {
     top: 0;
     background-color: var(--bg-color);
     z-index: 1000;
-    backdrop-filter: blur(10px);
-    -webkit-backdrop-filter: blur(10px);
-    border-bottom: 1px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
 }
 
 .logo {
     font-weight: 700;
     font-size: 1.5rem;
-    color: var(--accent-color);
+    color: var(--text-color);
+    border: 2px solid var(--border-color);
+    padding: 0.3rem 0.8rem;
+    background-color: var(--bg-color);
 }
 
 .theme-switch {
@@ -92,9 +97,8 @@ header {
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: #ccc;
-    transition: .4s;
-    border-radius: 30px;
+    background-color: var(--bg-color);
+    border: 2px solid var(--border-color);
 }
 
 .slider:before {
@@ -103,10 +107,9 @@ header {
     height: 22px;
     width: 22px;
     left: 4px;
-    bottom: 4px;
-    background-color: white;
-    transition: .4s;
-    border-radius: 50%;
+    bottom: 2px;
+    background-color: var(--text-color);
+    border: 2px solid var(--border-color);
 }
 
 input:checked + .slider {
@@ -134,8 +137,8 @@ input:checked + .slider:before {
     width: 200px;
     height: 200px;
     overflow: hidden;
-    border-radius: 50%;
-    box-shadow: 0 8px 30px var(--shadow-color);
+    border: 4px solid var(--border-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
 }
 
 .profile-img {
@@ -147,10 +150,12 @@ input:checked + .slider:before {
 .hero h1 {
     font-size: 3rem;
     margin-bottom: 1rem;
-    background: linear-gradient(90deg, var(--accent-color), #9c89ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-top: 3px solid var(--border-color);
+    border-bottom: 3px solid var(--border-color);
+    padding: 1rem 0;
 }
 
 .hero p {
@@ -169,33 +174,37 @@ input:checked + .slider:before {
 .social-links a {
     color: var(--text-color);
     font-size: 1.5rem;
-    transition: transform 0.3s, color 0.3s;
+    border: 2px solid var(--border-color);
+    padding: 0.5rem;
+    display: inline-block;
+    background-color: var(--bg-color);
 }
 
 .social-links a:hover {
-    color: var(--accent-color);
-    transform: translateY(-3px);
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 .cta-button {
     display: inline-block;
     margin-top: 2rem;
     padding: 0.8rem 2rem;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 30px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 3px solid var(--border-color);
     font-size: 1rem;
-    font-weight: 600;
+    font-weight: 700;
     cursor: pointer;
     text-decoration: none;
-    transition: transform 0.3s, box-shadow 0.3s;
-    box-shadow: 0 4px 15px rgba(74, 108, 247, 0.3);
+    box-shadow: 5px 5px 0px var(--shadow-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
 }
 
 .cta-button:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(74, 108, 247, 0.4);
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    box-shadow: 8px 8px 0px var(--shadow-color);
 }
 
 .resume-section {
@@ -208,10 +217,12 @@ input:checked + .slider:before {
     text-align: center;
     font-size: 2.5rem;
     margin-bottom: 3rem;
-    background: linear-gradient(90deg, var(--accent-color), #9c89ff);
-    -webkit-background-clip: text;
-    background-clip: text;
-    color: transparent;
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 5px;
+    border: 3px solid var(--border-color);
+    padding: 1rem;
+    background-color: var(--bg-color);
 }
 
 .resume-header {
@@ -232,24 +243,25 @@ input:checked + .slider:before {
 
 .resume-controls button {
     padding: 0.5rem 1rem;
-    background-color: var(--accent-color);
-    color: white;
-    border: none;
-    border-radius: 5px;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 2px solid var(--border-color);
     cursor: pointer;
-    font-weight: 500;
-    transition: background-color 0.3s;
+    font-weight: 700;
+    font-family: 'Courier New', 'Courier', monospace;
+    text-transform: uppercase;
 }
 
 .resume-controls button:hover {
-    background-color: #3a55d9;
+    background-color: var(--bg-color);
+    color: var(--text-color);
 }
 
 .resume-container {
     background-color: var(--card-bg);
-    border-radius: 15px;
     padding: 2rem;
-    box-shadow: 0 10px 30px var(--shadow-color);
+    border: 3px solid var(--border-color);
+    box-shadow: 10px 10px 0px var(--shadow-color);
 }
 
 .section {
@@ -267,7 +279,12 @@ input:checked + .slider:before {
 .section h3 {
     font-size: 1.5rem;
     margin-bottom: 1.5rem;
-    color: var(--accent-color);
+    color: var(--text-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    border-left: 6px solid var(--border-color);
+    padding-left: 1rem;
+    font-weight: 900;
 }
 
 .entry {
@@ -291,9 +308,12 @@ input:checked + .slider:before {
 }
 
 .entry-date {
-    color: var(--accent-color);
-    font-weight: 500;
+    color: var(--text-color);
+    font-weight: 700;
     font-size: 0.9rem;
+    border: 2px solid var(--border-color);
+    padding: 0.2rem 0.5rem;
+    background-color: var(--bg-color);
 }
 
 .entry-subtitle {
@@ -314,18 +334,19 @@ input:checked + .slider:before {
 }
 
 .skill-tag {
-    background-color: rgba(74, 108, 247, 0.1);
-    color: var(--accent-color);
+    background-color: var(--bg-color);
+    color: var(--text-color);
     padding: 0.5rem 1rem;
-    border-radius: 30px;
+    border: 2px solid var(--border-color);
     font-size: 0.9rem;
-    font-weight: 500;
-    transition: background-color 0.3s, transform 0.3s;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1px;
 }
 
 .skill-tag:hover {
-    background-color: rgba(74, 108, 247, 0.2);
-    transform: translateY(-2px);
+    background-color: var(--text-color);
+    color: var(--bg-color);
 }
 
 footer {
