@@ -79,12 +79,12 @@
         });
 
         // Download resume as PDF
-        document.getElementById('download-pdf-btn').addEventListener('click', function() {
-            let link = document.createElement('a');
-            link.href = './resume.pdf';
-            link.target = '_blank';  // open in a new tab
-            link.click();
-        });
+        // document.getElementById('download-pdf-btn').addEventListener('click', function() {
+        //     let link = document.createElement('a');
+        //     link.href = './resume.pdf';
+        //     link.target = '_blank';  // open in a new tab
+        //     link.click();
+        // });
 
         // Set current year in footer
         document.getElementById('current-year').textContent = new Date().getFullYear();

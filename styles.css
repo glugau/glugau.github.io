@@ -183,6 +183,22 @@ input:checked + .slider:before {
     letter-spacing: 2px;
 }
 
+.cta-button:visited {
+    display: inline-block;
+    margin-top: 2rem;
+    padding: 0.8rem 2rem;
+    background-color: var(--text-color);
+    color: var(--bg-color);
+    border: 3px solid var(--border-color);
+    font-size: 1rem;
+    font-weight: 700;
+    cursor: pointer;
+    text-decoration: none;
+    box-shadow: 5px 5px 0px var(--shadow-color);
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
 .cta-button:hover {
     background-color: var(--bg-color);
     color: var(--text-color);
